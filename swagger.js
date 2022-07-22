@@ -9,7 +9,7 @@ const doc = {
     },
     host: process.env.NODE_ENV === "DEVELOPMENT" ? "localhost:5000" : "chimoney-blog.herokuapp.com",
     basePath: "/",
-    schemes: ["https"],
+    schemes: ["https", "http"],
     consumes: ["application/json"],
     produces: ["application/json"],
     tags: [
