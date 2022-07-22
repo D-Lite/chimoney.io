@@ -8,7 +8,6 @@
   "host": "chimoney-blog.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "securityDefinitions": {
