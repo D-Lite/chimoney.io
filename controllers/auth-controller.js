@@ -16,7 +16,7 @@ const register = async (data, role, res) => {
         const newUser = new User({
             ...data,
             password: hashedPassword,
-            role
+            role: 'admin',
         });
  
         await newUser.save();
