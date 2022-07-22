@@ -1,4 +1,5 @@
 const swaggerAutogen = require("swagger-autogen")()
+require("dotenv").config();
  
 const doc = {
     info: {
@@ -6,7 +7,7 @@ const doc = {
         title: "Chimoney Blog API",
         description: "<b>Engineering blog api for chimoney.io</b>. Please, create a user, login using the credentials so you can get the Bearer token and insert at the <b>AUTHORIZE</b> button below"
     },
-    host: process.env.NODE_ENV === "development" ?"localhost:5000" : "https://chimoney-blog.herokuapp.com",
+    host: process.env.NODE_ENV === "DEVELOPMENT" ? "localhost:5000" : "https://chimoney-blog.herokuapp.com",
     basePath: "/",
     schemes: ["http", "https"],
     consumes: ["application/json"],
@@ -45,6 +46,7 @@ const doc = {
         },
     }
 };
+
  
 const outputFile = "./swagger_output.json";
 const endpointFiles = ["./routes/index.js"];
